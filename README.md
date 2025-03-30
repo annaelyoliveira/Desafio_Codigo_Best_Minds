@@ -22,3 +22,5 @@ Projeto desenvolvido como parte do processo seletivo para a vaga de Trainee Best
 - Express
 - PostgreSQL
 
+## Captura de Tela 
+![Captura de tela 2025-03-29 214422](https://github.com/user-attachments/assets/c1d84c2e-0e29-4014-b2cf-baff753c0932)
