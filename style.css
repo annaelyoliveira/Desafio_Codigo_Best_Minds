@@ -1,0 +1,136 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #212529;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #2b3035;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #4dff91;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#produtoForm {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #343a40;
+    border-radius: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+#produtoForm input, 
+#produtoForm textarea {
+    font-size: 1rem;
+    padding: 10px 12px;
+    background-color: #212529;
+    border: 2px solid #495057;
+    border-radius: 8px;
+    color: #f8f9fa;
+    min-width: 150px;
+}
+
+#nome {
+    flex: 2;
+}
+
+#codigo {
+    flex: 1;
+}
+
+#descricao {
+    font-size: 1rem;
+    padding: 5px 12px;
+    background-color: #212529;
+    border: 2px solid #495057;
+    border-radius: 8px;
+    color: #f8f9fa;
+    min-width: 150px; 
+    font-family: "Ubuntu", sans-serif;
+}
+
+#preco {
+    flex: 1;
+}
+
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #343a40;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #495057;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #495057;
+    color: #4dff91;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+button {
+    margin: 0 5px;
+    background-color: #4dff91;
+    border: none;
+    border-radius: 8px;
+    color: #212529;
+    font-weight: 700;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+.error {
+    color: red;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    button {
+        padding: 8px 12px;
+        margin: 5px 0;
+    }
+}
