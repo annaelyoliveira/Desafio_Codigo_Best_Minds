@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Carregar produtos ao iniciar
     carregarProdutos();
 });
 

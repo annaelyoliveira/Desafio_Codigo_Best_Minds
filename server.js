@@ -15,13 +15,30 @@ const pool = new Pool({
 });
 
 // Teste de conexão
-pool.query('SELECT NOW()', (err, res) => {
-  if (err) {
-    console.error('❌ Erro ao conectar ao PostgreSQL:', err);
-  } else {
-    console.log('✅ Conexão OK. Hora do PostgreSQL:', res.rows[0].now);
-  }
-});
+pool.query('SELECT NOW()', async (err, res) => {
+    if (err) {
+      console.error('❌ Erro ao conectar ao PostgreSQL:', err);
+    } else {
+      console.log('✅ Conexão OK. Hora do PostgreSQL:', res.rows[0].now);
+      
+      try {
+        // Criação da tabela produtos se não existir
+        await pool.query(`
+          CREATE TABLE IF NOT EXISTS produtos (
+            id SERIAL PRIMARY KEY,
+            nome VARCHAR(100) NOT NULL,
+            codigo VARCHAR(50) UNIQUE NOT NULL,
+            descricao TEXT,
+            preco DECIMAL(10, 2) NOT NULL,
+            data_criacao TIMESTAMP DEFAULT NOW()
+          )
+        `);
+        console.log('✅ Tabela "produtos" verificada/criada com sucesso');
+      } catch (error) {
+        console.error('❌ Erro ao criar tabela:', error);
+      }
+    }
+  });
 
 // Rota POST para criar produtos
 app.post('/produtos', async (req, res) => {
